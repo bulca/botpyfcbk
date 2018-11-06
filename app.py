@@ -28,10 +28,7 @@ def main():
 
             if x.get('message'):
                 if x['message'].get('text'):
-                    from bs4 import BeautifulSoup
-                    import requests
-                    import json
-                    import pyperclip
+
 
                     print('Sahibinden İlan Detay Botu : \n')
 
