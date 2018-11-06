@@ -28,11 +28,11 @@ def main():
 
             if x.get('message'):
                 if x['message'].get('text'):
-                    msg = "You're great! Send me a photo though."
+                    msg = "You're great! Send me a photo though." + x['message'].get('text')
                     a = bot.send_text_message(recipient_id, msg)
                 if x['message'].get('attachments'):
                     with open('./magic_csv/blackgirlmagicCSV.csv', 'r') as csvfile:
-                        magiccsv = list(csv.reader(csvfile)) 
+                        magiccsv = list(csv.reader(csvfile))
                     lengthofcsv = len(magiccsv)
                     position = randint(0, lengthofcsv)
                     response = magiccsv[position][0]
